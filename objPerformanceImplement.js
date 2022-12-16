@@ -22,9 +22,24 @@ const obj = {
 
 }
 
+
 console.log(obj.name)
 console.log(obj['name'])
 // console.log(obj['lemail']) // invalid key must be access by []
+
+// complexity O(n)
+console.log(Object.keys(obj));
+
+// complexity O(n)
+console.log(Object.values(obj));
+
+// complexity O(n)
+console.log(Object.entries(obj));
+
+
+
+
+
 
 
 for (let key in obj) {
