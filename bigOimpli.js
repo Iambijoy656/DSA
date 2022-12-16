@@ -168,4 +168,16 @@ function log(a, b) {
 log(2, 5)
 
 
+// efficiency
+// O(1) - O(log n) - O(n) - O(n log n) - O(n^2)
 
+
+const name = 'Bijoyyyyyy'  //O(n)
+
+const arr = [15, 5, 556, 655] //O(n)
+
+// o(n)
+const obj = {
+    name: 'Bijoy',
+    email: 'bijoy@gmail.com'
+}
