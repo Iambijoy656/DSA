@@ -76,28 +76,57 @@ console.log(countCharacter('He llo'))
 //return true 
 // otherwise false
 
-
-
 // input -arr1-['a', 'b', 'c'] arr2-[1, 2, 3, 'z'] Output: False
 // input -arr1-['a', 'b', 'c'] arr2-[1, 2, 3, 'c'] output: true
 
 
 //time complexity O(n^2) /O(n*m)
 //space complexity O(1)
+// function isElementsExists(arr1, arr2) {
+//     let exists = false;
+//     for (const elm of arr1) {
+//         if (arr2.includes(elm)) {
+//             exists = true;
+//             break;
+//         }
+
+//     }
+//     return exists;
+// }
+
+
+// const arr1 = ['a', 'b', 'c'];
+// const arr2 = [1, 2, 3, 'z'];
+
+// console.log(isElementsExists(arr1, arr2))
+
+
+
+// efficiency way or optimize way
+
+//time complexity O(n) 
+//space complexity O(n)
 function isElementsExists(arr1, arr2) {
+    const frequencyCounter = {}
     let exists = false;
     for (const elm of arr1) {
-        if (arr2.includes(elm)) {
-            exists = true;
-            break;
+        frequencyCounter[elm] = true
+    }
+    for (let elm of arr2) {
+        console.log(elm)
+        console.log(elm in frequencyCounter)
+        if (elm in frequencyCounter) {
+            return true;
         }
-
     }
     return exists;
+
+
+
 }
 
 
 const arr1 = ['a', 'b', 'c'];
-const arr2 = [1, 2, 3, 'z'];
+const arr2 = [1, 2, 3, 'c'];
 
 console.log(isElementsExists(arr1, arr2))
