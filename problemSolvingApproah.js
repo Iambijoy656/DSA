@@ -22,6 +22,9 @@
     input - string 'greet' output - {g:1, r:1, e:2 , t:1}
  */
 
+
+// TIme complexity O(n)
+// space complexity O(n)
 function countCharacter(str) {
 
     // 1. Creating an object for tracking frequency of   element.
@@ -36,25 +39,65 @@ function countCharacter(str) {
             continue;
         }
 
-        if (char in hashMap) {
-            // 3. check if the element exists on the object increment the existent count value
-            hashMap[char] = hashMap[char] + 1
-        } else {
-            // 4. if not present assign the value 1
-            hashMap[char] = 1
-        }
+        //use  ternary
+        // char in hashMap ? hashMap[char] = hashMap[char] + 1 : hashMap[char] = 1
+
+        //use advance javaScript
+        hashMap[char] = (hashMap[char] || 0) + 1;
+
+
+
+        // if (char in hashMap) {
+        //     // 3. check if the element exists on the object increment the existent count value
+        //     hashMap[char] = hashMap[char] + 1
+        // } else {
+        //     // 4. if not present assign the value 1
+        //     hashMap[char] = 1
+        // }
 
     }
-
     console.log(hashMap);
-
 
     // 5.return
     return hashMap;
 
-
-
-
-
 }
 console.log(countCharacter('He llo'))
+
+
+
+
+
+
+// problem:
+
+// check the element of first array 2nd array
+// if the element exists 
+//return true 
+// otherwise false
+
+
+
+// input -arr1-['a', 'b', 'c'] arr2-[1, 2, 3, 'z'] Output: False
+// input -arr1-['a', 'b', 'c'] arr2-[1, 2, 3, 'c'] output: true
+
+
+//time complexity O(n^2) /O(n*m)
+//space complexity O(1)
+function isElementsExists(arr1, arr2) {
+    let exists = false;
+    for (const elm of arr1) {
+        if (arr2.includes(elm)) {
+            exists = true;
+            break;
+        }
+
+    }
+    return exists;
+}
+
+
+const arr1 = ['a', 'b', 'c'];
+const arr2 = [1, 2, 3, 'z'];
+
+console.log(isElementsExists(arr1, arr2))
