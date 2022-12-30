@@ -127,6 +127,6 @@ function isElementsExists(arr1, arr2) {
 
 
 const arr1 = ['a', 'b', 'c'];
-const arr2 = [1, 2, 3, 'c'];
+const arr2 = [1, 2, 3, 'z'];
 
 console.log(isElementsExists(arr1, arr2))
