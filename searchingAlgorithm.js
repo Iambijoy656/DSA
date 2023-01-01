@@ -1,13 +1,10 @@
 // Searching algorithm
 // index of(1,-1)
 //includes(true,false)
-
 /**
  [1,3,5,7]
 
-
  */
-
 //time complexity Big O(n)
 //space Complexity O(1)
 //linear search
@@ -23,8 +20,6 @@
 // }
 
 // console.log(searchElmIndex([1, 3, 5, 7, 9], 10))
-
-
 
 
 //Binary search / Divide and conquer
@@ -46,7 +41,7 @@ function searchElmIndex(arr, searchElm) {
 
 }
 
-console.log(searchElmIndex([1, 3, 5, 7, 9, 10], 3))
+console.log(searchElmIndex([1, 3, 5, 7, 9, 10], 10))
 
 /**
  * [1, 3, 5, 7, 9,10],  7     mid= 0+5/2 = 2.5=2
@@ -59,5 +54,4 @@ console.log(searchElmIndex([1, 3, 5, 7, 9, 10], 3))
               l  
               m  
               h
-
  */
