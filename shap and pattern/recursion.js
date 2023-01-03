@@ -103,20 +103,38 @@ console.log(factorial(5));
 
 //recursive solution
 //impure recursive solution
-function createRange(num1, num2) {
-    let rangeArr = [];
-    function helper(helperInput, targetNum = 20) {
-        rangeArr.push(helperInput)
-        //base case
-        if (helperInput === targetNum) {
-            return
-        }
-        helper(helperInput + 1, targetNum)
+// function createRange(num1, num2) {
+//     let rangeArr = [];
+//     function helper(helperInput, targetNum = 20) {
+//         rangeArr.push(helperInput)
+//         //base case
+//         if (helperInput === targetNum) {
+//             return
+//         }
+//         helper(helperInput + 1, targetNum)
 
+//     }
+//     helper(num1, num2)
+//     console.log(rangeArr)
+// }
+
+// createRange(10, 20)
+
+
+
+
+
+//Pure Recursive solution
+function createRange(num1, targetNum = 20, rangeArr = []) {
+    //base case
+    rangeArr = rangeArr.concat(num1)
+    console.log(rangeArr, num1);
+    if (num1 === targetNum) {
+        return rangeArr;
     }
-    helper(num1, num2)
-    console.log(rangeArr)
+    return createRange(num1 + 1, targetNum, rangeArr)
+
 }
 
-createRange(10, 20)
-
+console.log(createRange(10, 20)
+)
