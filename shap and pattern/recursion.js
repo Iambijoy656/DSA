@@ -138,3 +138,32 @@ function createRange(num1, targetNum = 20, rangeArr = []) {
 
 console.log(createRange(10, 20)
 )
+
+
+//fibonacci series
+// [0,1,1,2,3,5,8]
+
+
+//iterative solution
+// function finonacci(n) {
+//     const results = [0, 1]
+//     for (var i = 2; i <= n; i++) {
+//         results.push(results[i - 1] + results[i - 2])
+
+//     }
+//     console.log(results)
+//     return results[n];
+
+// }
+// console.log(finonacci(10))
+
+
+
+//recursive solution
+function fibonacci(n) {
+    // base case
+    if (n <= 2) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+
+}
+console.log(fibonacci(10))
