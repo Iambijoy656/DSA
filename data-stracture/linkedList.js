@@ -131,7 +131,18 @@ class LinkedList {
 
     }
 
+    //find item at specific index
+    //time complexity O(n)
+    get(index) {
+        //check validation of  index
+        if (index < 0 || index > length) return null;
+        let temp = this.head
+        for (var i = 0; i < index; i++) {
+            temp = temp.next
+        }
+        return temp;
 
+    }
 
 
 
