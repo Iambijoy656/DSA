@@ -1,5 +1,5 @@
 /**
- * // if i < p ; s++ and replace each other
+ * // if i < p ; s++ then replace each other
      i
   p
  [5, 9 ,7, 4 ,2, 3]
@@ -58,6 +58,8 @@
 
  */
 
+//time complexity O(nlog(n))//space complexity o(log N)
+//sorted array complexity O(n^2)
 function swap(arr, idx1, idx2) {
     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
 }
